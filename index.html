@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lebenslauf – Lukas Bach</title>
+  <style>
+    :root{
+      --bg:#f7f9fc; --text:#1f2937; --muted:#6b7280;
+      --primary:#4338ca; --secondary:#7c3aed; --card:#ffffff; --line:#e5e7eb;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    .page{max-width:1080px;margin:36px auto;padding:0 18px}
+    header{
+      background:linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color:#fff;border-radius:18px;padding:24px;box-shadow:0 10px 30px rgba(67,56,202,.25);
+      display:flex;align-items:center;gap:20px;flex-wrap:wrap
+    }
+    header img{
+      width:120px;height:120px;object-fit:cover;border-radius:50%;
+      border:3px solid #fff;box-shadow:0 0 10px rgba(0,0,0,.2)
+    }
+    header h1{margin:0;font-size:28px;letter-spacing:.2px}
+    header .subtitle{margin:4px 0 10px;font-size:14px;color:#e0e7ff}
+    .contact{display:flex;flex-wrap:wrap;gap:12px}
+    .contact a, .contact span{
+      color:#fff;text-decoration:none;font-size:14px;background:rgba(255,255,255,.12);
+      padding:6px 10px;border-radius:999px
+    }
+    .contact a:hover{text-decoration:underline}
+
+    .grid{display:grid;grid-template-columns:340px 1fr;gap:18px;margin-top:18px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+    section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 18px 6px}
+    h2{margin:0 0 12px;font-size:18px;color:#4338ca}
+    h3{margin:0 0 4px;font-size:16px}
+    .meta{color:#6b7280;font-size:13px;margin:0 0 8px}
+    ul{margin:8px 0 16px 18px;padding:0}
+    li{margin:4px 0}
+    .taglist{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 6px}
+    .tag{font-size:12px;color:#4338ca;background:#eef2ff;border:1px solid #e2e8f0;padding:4px 8px;border-radius:999px}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width:700px){.two-col{grid-template-columns:1fr}}
+    .timeline .item{position:relative;padding-left:22px;margin-bottom:16px}
+    .timeline .item:before{content:"";position:absolute;left:8px;top:4px;width:6px;height:6px;background:#4338ca;border-radius:50%}
+    .timeline .item:after{content:"";position:absolute;left:10px;top:14px;bottom:-6px;width:2px;background:#e5e7eb}
+    .timeline .item:last-child:after{display:none}
+    .small{font-size:13px;color:#6b7280}
+    @media print{
+      body{background:#fff}
+      .page{margin:0;max-width:none}
+      header{box-shadow:none}
+      a{color:#000;text-decoration:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- Header -->
+    <header>
+      <img src="lukas.jpg" alt="Bewerbungsfoto Lukas Bach">
+      <div>
+        <h1>Lukas Bach</h1>
+        <p class="subtitle">Kommunikativ · Digital · Lösungsorientiert — Key‑Account‑Mindset & Prozessoptimierung</p>
+        <div class="contact">
+          <a href="tel:+4915222170821">📞 0152 22170821</a>
+          <a href="mailto:bachlukas@hotmail.de">✉️ bachlukas@hotmail.de</a>
+          <a href="https://www.linkedin.com/in/lukas-bach-05b798215" target="_blank" rel="noreferrer">🔗 linkedin.com/in/lukas-bach-05b798215</a>
+          <span>📍 50765 Köln</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- Sidebar -->
+      <aside>
+        <section>
+          <h2>Kurzprofil</h2>
+          <p class="small">
+            Kaufmännischer Profi mit &gt;15 Jahren Erfahrung in Kundenbetreuung, Führung, E‑Commerce und Digitalisierung.
+            Stark in sympathischer Kommunikation, schneller Analyse und praxisnaher Umsetzung (u. a. „Geyssel 4.0“).
+            Unternehmerisch geprägt (eigener Online‑Shop mit Lager) und social‑media‑erfahren (TikTok &gt;130 k Follower).
+          </p>
+          <div class="taglist">
+            <span class="tag">Key‑Account</span>
+            <span class="tag">Digitalisierung</span>
+            <span class="tag">Prozessoptimierung</span>
+            <span class="tag">Führung</span>
+            <span class="tag">E‑Commerce</span>
+          </div>
+        </section>
+
+        <section>
+          <h2>Kenntnisse &amp; Kompetenzen</h2>
+          <h3>Kaufmännisch &amp; Management</h3>
+          <ul>
+            <li>Kundenorientierte Kommunikation &amp; Key Account</li>
+            <li>Unternehmensführung &amp; Controlling, ROI</li>
+            <li>Kennzahlenanalyse (EBC*L)</li>
+            <li>Mitarbeiterführung &amp; Motivation (AEVO)</li>
+          </ul>
+          <h3>Digitale Tools &amp; IT</h3>
+          <ul>
+            <li><strong>ERP:</strong> Lexware; Grundkenntnisse SAP / MS Dynamics</li>
+            <li><strong>CRM:</strong> Salesforce, HubSpot</li>
+            <li><strong>Office 365:</strong> Excel (fortgeschritten), Word, PowerPoint</li>
+            <li><strong>Google:</strong> Analytics 4, Tag Manager, Google Ads</li>
+          </ul>
+          <h3>Logistik &amp; Organisation</h3>
+          <ul>
+            <li>Lageraufbau &amp; -leitung (eigenes Lager)</li>
+            <li>Kommissionierung, Versand, Bestandsführung</li>
+            <li>Inventurplanung &amp; Prozessoptimierung</li>
+          </ul>
+          <h3>Marketing &amp; Social Media</h3>
+          <ul>
+            <li>E‑Commerce‑Management</li>
+            <li>TikTok &gt;130.000 Follower (Content &amp; Community)</li>
+            <li>Digitale Kampagnen (Google Ads, Social Ads)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Stärken</h2>
+          <ul>
+            <li>Sympathische, klare Kommunikation</li>
+            <li>Schnelle Auffassungsgabe &amp; Lösungsorientierung</li>
+            <li>Unternehmerisches Mindset</li>
+            <li>Kaufmännisch &amp; technisch versiert</li>
+            <li>Umsetzungsstärke</li>
+          </ul>
+        </section>
+      </aside>
+
+      <!-- Main -->
+      <main>
+        <section>
+          <h2>Berufserfahrung</h2>
+          <div class="timeline">
+
+            <div class="item">
+              <h3>Geyssel Fahrtreppenmanagement GmbH – Köln</h3>
+              <p class="meta">Auftragsmanagement / Telefonzentrale · <strong>05/2025 – heute</strong></p>
+              <ul>
+                <li>Kundenbetreuung, Angebotserstellung, Einsatz‑/Bereitschaftsdisposition</li>
+                <li>Aufträge &amp; Servicedaten im ERP (Lexware) pflegen; Reports &amp; Listen</li>
+                <li><strong>Digitalisierung „Geyssel 4.0”:</strong> Softwarevergleich, ROI‑Berechnung, Rollout‑/Schulungskonzept</li>
+                <li>Schnittstelle zwischen Kunden, Disposition, Technik &amp; Backoffice</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <h3>LA Deal e.K. – Köln</h3>
+              <p class="meta">Gründer &amp; Geschäftsführer – Onlinehandel mit eigenem Lager (Retourenhandel) · <strong>10/2022 – 01/2025</strong></p>
+              <ul>
+                <li>Unternehmensaufbau &amp; -struktur von Einkauf bis Kundenservice</li>
+                <li>Lager eingerichtet &amp; geleitet: Warenannahme, Bestände, Kommissionierung, Versand</li>
+                <li>Vertrieb über Shop &amp; Marktplätze; Preis‑ &amp; Sortimentssteuerung</li>
+                <li>Controlling, Kalkulation &amp; Liquiditätsplanung; Performance‑Analysen (Excel)</li>
+                <li>Marketing &amp; Social Media: TikTok &gt;130 k Follower, Content‑Strategie &amp; Kampagnen</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <h3>Klingelnberg GmbH – Hückeswagen</h3>
+              <p class="meta">Lagerarbeiter / Lagerverwalter · <strong>08/2021 – 05/2022</strong></p>
+              <ul>
+                <li>Kommissionierungsaufträge erstellt und an Mitarbeitende zugeteilt</li>
+                <li>Inventuren geplant, organisiert und umgesetzt</li>
+                <li><strong>Neustrukturierung des Lagers nach Hochwasser:</strong> neue Lagerplätze, optimierte Abläufe</li>
+                <li>Bestandsführung im Warenwirtschaftssystem; Qualität &amp; Arbeitssicherheit</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <h3>Ford‑Werke GmbH – Köln</h3>
+              <p class="meta">Teamleiter Produktion · <strong>10/2010 – 08/2021</strong></p>
+              <ul>
+                <li>Führung &amp; Einsatzplanung von bis zu 15 Mitarbeitenden (Schichtbetrieb)</li>
+                <li>Produktionsqualität, Effizienz &amp; Sicherheit; Lean‑Verbesserungen</li>
+                <li>Schnittstellenkoordination Produktion – Logistik – Qualität</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <h3>Hoenig Brandschutz GmbH – Köln</h3>
+              <p class="meta">Servicetechniker &amp; Vertrieb · <strong>2009 – 2010</strong></p>
+              <ul>
+                <li>Wartung von Feuerlöschern &amp; Brandschutzanlagen; Vertrieb gesetzlicher Sicherheitstechnik</li>
+                <li>Praxisnahe Brandschutzschulungen (Simulationsanlage), Training mit CO₂‑Löschern/Branddecken</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <h3>Bach &amp; Klos GmbH – Köln</h3>
+              <p class="meta">Kaufmännischer Angestellter · <strong>06/2009 – 10/2010</strong></p>
+              <ul>
+                <li>Auftragsbearbeitung, Verwaltung und Organisation</li>
+              </ul>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="two-col">
+          <div>
+            <h2>Ausbildung</h2>
+            <h3>Elmer GmbH – Köln</h3>
+            <p class="meta">Kaufmann im Groß‑ &amp; Außenhandel (IHK) · <strong>08/2006 – 06/2009</strong></p>
+            <p class="small">Abschluss: <strong>befriedigend (74 Punkte)</strong> · Fachgespräch: <strong>sehr gut (94 Punkte)</strong></p>
+          </div>
+
+          <div>
+            <h2>Weiterbildungen &amp; Zertifikate</h2>
+            <ul>
+              <li><strong>IHK‑Ausbildereignungsschein (AEVO)</strong> – 13.10.2015</li>
+              <li><strong>EBC*L – Bilanz‑ &amp; Kennzahlenanalyse (Stufe A)</strong> – 29.06.2022</li>
+              <li><strong>European Business Competence Licence</strong> (Basis Wirtschaftskompetenz)</li>
+            </ul>
+            <p>
+              📎 <a href="zeugnisse.pdf" target="_blank">Alle Zeugnisse als PDF ansehen</a>
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
