@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lebenslauf – Lukas Bach</title>
+  <meta name="color-scheme" content="light dark" />
+  <style>
+    :root{
+      /* Petrol/Grün */
+      --primary:#0f766e; --secondary:#22c55e;
+      --bg:#f6faf9; --card:#ffffff; --line:#e5e7eb;
+      --text:#0f172a; --muted:#64748b; --accent:#0ea5a5;
+      --shadow:0 10px 30px rgba(15,118,110,.16);
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
+      font:15px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    a:focus{outline:2px solid var(--secondary);outline-offset:2px;border-radius:6px}
+    .page{max-width:1080px;margin:36px auto;padding:0 18px}
+
+    /* Header */
+    header{
+      background:linear-gradient(135deg,var(--primary) 0%,var(--secondary) 100%);
+      color:#fff;border-radius:18px;padding:22px;box-shadow:var(--shadow);
+      display:flex;align-items:center;gap:18px;flex-wrap:wrap
+    }
+    header img{width:110px;height:110px;object-fit:cover;border-radius:50%;
+      border:3px solid #fff;box-shadow:0 0 10px rgba(0,0,0,.18)}
+    header h1{margin:0;font-size:26px}
+    .subtitle{margin:4px 0 8px;font-size:13px;color:#e6fffa}
+    .slogan{margin-top:6px;font-size:13px;color:#d1fae5;font-weight:600}
+    .contact{display:flex;flex-wrap:wrap;gap:10px}
+    .contact a{color:#fff;background:rgba(255,255,255,.12);padding:6px 10px;border-radius:999px;font-size:13px}
+    .contact a:hover{background:rgba(255,255,255,.18)}
+
+    /* Layout */
+    .grid{display:grid;grid-template-columns:320px 1fr;gap:16px;margin-top:16px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+    section{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+    h2{margin:0 0 10px;font-size:17px;color:var(--primary)}
+    h3{margin:0 0 4px;font-size:15px}
+    .small{font-size:12.6px;color:var(--muted);margin:0}
+    ul{margin:6px 0 0 18px;padding:0} li{margin:4px 0}
+
+    /* Timeline – Marker GANZ LINKS (keine Überdeckung) */
+    .timeline{position:relative;margin-left:0;padding-left:50px}   /* viel Platz für Text */
+    .timeline:before{
+      content:"";position:absolute;left:-20px;top:0;bottom:0;width:2px;
+      background:linear-gradient(180deg,var(--primary),var(--secondary));
+      border-radius:2px;opacity:.35
+    }
+    .t-item{position:relative;margin:0 0 16px 0;transition:transform .15s ease}
+    .t-item:hover{transform:translateX(2px)}
+    .t-item:before{
+      content:"";position:absolute;left:-25px;top:5px;width:12px;height:12px;border-radius:50%;
+      background:radial-gradient(circle at 30% 30%,#fff 0%,#fff 35%,var(--secondary) 36%,var(--primary) 100%);
+      box-shadow:0 0 0 3px #fff
+    }
+    .meta{color:var(--muted);font-size:12.6px;margin:0 0 6px}
+    .pill{display:inline-block;font-size:11.5px;color:#065f46;background:#ecfdf5;border:1px solid #d1fae5;padding:3px 8px;border-radius:999px;margin-right:6px}
+
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width:700px){.two-col{grid-template-columns:1fr}}
+
+    .taglist{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+    .tag{font-size:11.5px;color:#03695e;background:#d6f5f0;border:1px solid #b7efe7;padding:3px 8px;border-radius:999px}
+
+    /* Doc links */
+    .doclink{display:inline-flex;align-items:center;gap:6px;padding:2px 4px;border-radius:8px}
+    .doclink:hover{background:#ecfdf5}
+
+    /* Mobile */
+    @media (max-width:520px){
+      header img{width:88px;height:88px}
+      header h1{font-size:22px}
+      .grid{gap:12px}
+      section{padding:14px}
+      .timeline{padding-left:46px}
+    }
+
+    /* Dark mode */
+    @media (prefers-color-scheme: dark){
+      :root{ --bg:#0b1413; --card:#0f1a19; --line:#11312c; --text:#e7fffb; --muted:#9fb3bd; --accent:#2dd4bf;}
+      .doclink:hover{background:#133f3a}
+      .pill{background:#0c2e2a;border-color:#155e57;color:#bfffea}
+      .tag{background:#0b3c37;border-color:#1e5e55;color:#d1faf5}
+    }
+
+    /* Print (ATS-freundlich) */
+    @media print{
+      body{background:#fff}
+      .page{margin:0;max-width:none}
+      header{background:#fff;color:#000;border:1px solid #ccc;box-shadow:none}
+      .subtitle,.slogan{color:#000}
+      a{color:#000;text-decoration:underline}
+      .contact a{background:none;padding:0}
+      section{border-color:#ddd}
+      .t-item:hover{transform:none}
+      .t-item{page-break-inside:avoid}
+      section{break-inside:avoid}
+      @page{margin:14mm}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- HEADER -->
+    <header>
+      <img src="lukas.jpg" alt="Bewerbungsfoto Lukas Bach">
+      <div>
+        <h1>Lukas Bach</h1>
+        <p class="subtitle">Customer Success · Service Management · Kundenbindung & Digitalisierung · Kommunikativ · Prozessoptimierend</p>
+        <div class="slogan">Menschen verstehen. Vertrauen gewinnen. Lösungen schaffen.</div>
+        <div class="contact">
+          <a href="tel:+4915222170821" aria-label="Telefon anrufen">📞 0152 22170821</a>
+          <a href="mailto:bachlukas@hotmail.de" aria-label="E-Mail schreiben">✉️ bachlukas@hotmail.de</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- SIDEBAR -->
+      <aside>
+        <section>
+          <h2>Kurzprofil</h2>
+          <p class="small">
+            Kaufmännischer Allrounder mit über 15 Jahren Erfahrung in Kundenbetreuung, Projektsteuerung und Digitalisierung. 
+            Stärken: sympathische Kommunikation, schnelle Umsetzung. 
+            Leidenschaft für nachhaltige Kundenbeziehungen und messbare Prozessverbesserungen.          </p>
+          <div class="taglist">
+            <span class="tag">Customer Success</span>
+            <span class="tag">Soziale Intelligenz</span>
+            <span class="tag">Prozessoptimierung</span>
+            <span class="tag">CRM & Digitalisierung</span>
+            <span class="tag">Führung (AEVO)</span>
+          </div>
+        </section>
+
+        <section>
+          <h2>Kenntnisse &amp; Kompetenzen</h2>
+         <h3>Customer Success & Management</h3>
+          <ul>
+           <li>Kundenzufriedenheit & Bindung sichern</li>
+            <li>Konfliktlösung & Deeskalation</li>
+            <li>Customer Success Management & Key Account Betreuung</li>
+            <li>Kennzahlenanalyse & ROI-Betrachtungen (EBC*L)</li>
+            <li>Mitarbeiterführung & Motivation (AEVO)</li>
+          </ul>
+          <h3>Digitale Tools &amp; IT</h3>
+          <ul>
+            <li><strong>ERP:</strong> Lexware; Grundkenntnisse SAP / MS Dynamics</li>
+            <li><strong>CRM:</strong> Salesforce, HubSpot (Einarbeitung &amp; Nutzung)</li>
+            <li><strong>Office 365:</strong> Excel (fortgeschritten), Word, PowerPoint</li>
+            <li><strong>Google:</strong> Analytics 4, Tag Manager, Google Ads</li>
+          </ul>
+        </section>
+      </aside>
+
+      <!-- MAIN -->
+      <main>
+        <section>
+          <h2>Berufserfahrung</h2>
+          <div class="timeline">
+
+            <div class="t-item">
+              <h3>Geyssel Fahrtreppenmanagement GmbH – Köln</h3>
+              <p class="meta">Auftrags- und Kundenmanagement · <strong>05/2025 – heute</strong></p>
+              <ul>
+               <li>Erstkontakt & Betreuung von Geschäftsführern, Marktleitern, Centermanagern, Immobilieneigentümern</li>
+                <li>Empathisches Zuhören & Deeskalation → Abwanderung verhindert, Zahlungen gesichert</li>
+                <li>Konfliktmanagement zwischen Kunden, Service, Monteuren & Rechnungswesen</li>
+                <li>Lösungsorientierte Koordination → Problem binnen Stunden gelöst, Kundenerlebnis verbessert</li>
+                <li>Digitalisierung: <a class="doclink" href="geyssel4.html" target="_blank">📄 Geyssel 4.0</a> – Softwarevergleich, ROI-Berechnung, Rollout-/Schulungskonzept</li>
+                <li>Excel-Listen mit Makros automatisiert & Rückstau aufgearbeitet</li>
+                <li><em>Impact:</em> Kundenzufriedenheit und -bindung deutlich gestärkt; interne Prozesse verschlankt</li>
+
+              </ul>
+            </div>
+
+            <div class="t-item">
+              <h3>LA Deal e.K. – Köln</h3>
+              <p class="meta">Gründer &amp; Geschäftsführer – Onlinehandel mit eigenem Lager · <strong>10/2022 – 01/2025</strong></p>
+              <ul>
+                <li>Unternehmensaufbau &amp; -struktur von Einkauf bis Kundenservice</li>
+                <li>Lager eingerichtet &amp; geleitet: Warenannahme, Bestände, Kommissionierung, Versand</li>
+                <li>Vertrieb über Shop &amp; Marktplätze, Preis‑ &amp; Sortimentssteuerung</li>
+                <li>Controlling &amp; Liquiditätsplanung; Performance‑Analysen (Excel)</li>
+                <li>Marketing &amp; Social Media: TikTok &gt;130 k Follower</li>
+                <li><em>Impact:</em> Retouren & Supportaufwand reduziert (bessere Produkttexte & klare Prozesse).</li>
+              </ul>
+            </div>
+
+            <div class="t-item">
+              <h3>Klingelnberg GmbH – Hückeswagen</h3>
+              <p class="meta">Lagerarbeiter / Lagerverwalter · <strong>08/2021 – 05/2022</strong></p>
+              <ul>
+                <li>Erstellung &amp; Zuweisung von Kommissionierungsaufträgen, Mitarbeiterkoordination</li>
+                <li>Planung, Organisation &amp; Durchführung von Inventuren</li>
+                <li>Neustrukturierung des Lagers nach Hochwasserschaden, neue Lagerplätze</li>
+                <li>Bestandsführung im Warenwirtschaftssystem, Qualität &amp; Arbeitssicherheit</li>
+                <li><em>Impact:</em> Materialflüsse übersichtlicher (neue Lagerlogik & gekennzeichnete Zonen).</li>
+              </ul>
+            </div>
+
+            <div class="t-item">
+              <h3>Ford‑Werke GmbH – Köln</h3>
+              <p class="meta">Teamleiter Produktion · <strong>10/2010 – 08/2021</strong></p>
+              <ul>
+                <li>Führung &amp; Einsatzplanung von bis zu 15 Mitarbeitenden (Schichtbetrieb)</li>
+                <li>Qualität, Effizienz &amp; Sicherheit verantwortet (Lean‑Verbesserungen)</li>
+                <li>Schnittstellenkoordination Produktion – Logistik – Qualität</li>
+                <li><em>Impact:</em> Teamleistung stabilisiert (klare Standards & regelmäßiges Feedback).</li>
+              </ul>
+            </div>
+
+            <div class="t-item">
+              <h3>Hoenig Brandschutz GmbH – Köln</h3>
+              <p class="meta">Servicetechniker &amp; Vertrieb · <strong>2009 – 2010</strong></p>
+              <ul>
+                <li>Prüfung &amp; Wartung von Feuerlöschern und Brandschutzanlagen</li>
+                <li>Vertrieb gesetzlich vorgeschriebener Sicherheitstechnik</li>
+                <li>Praxisnahe Brandschutzschulungen (Simulationsanlage, CO₂‑Löscher, Branddecken)</li>
+                <li><em>Impact:</em> Mitarbeitende sicherer im Ernstfall (klare Demonstrationen & Übungen).</li>
+              </ul>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="two-col">
+          <div>
+            <h2>Ausbildung</h2>
+            <h3>
+              <a class="doclink" href="Zeugnisse.pdf" target="_blank" rel="noopener">📄 Elmer GmbH & Co. KG – Köln</a>
+            </h3>
+            <p class="meta">Kaufmann im Groß‑ &amp; Außenhandel (IHK) · <strong>08/2006 – 06/2009</strong></p>
+            <p class="small">Abschluss: <strong>befriedigend (74)</strong> · Fachgespräch: <strong>sehr gut (94)</strong></p>
+          </div>
+
+          <div>
+            <h2>Weiterbildungen &amp; Zertifikate</h2>
+            <ul class="small">
+              <li>
+                <a class="doclink" href="Zeugnisse.pdf" target="_blank" rel="noopener">📄 IHK‑Ausbildereignungsschein (AEVO)</a> – 13.10.2015
+              </li>
+              <li>
+                <a class="doclink" href="Zeugnisse.pdf" target="_blank" rel="noopener">📄 EBC*L – Bilanz‑ &amp; Kennzahlenanalyse</a> – 29.06.2022
+              </li>
+              <li>European Business Competence Licence (Basis)</li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
